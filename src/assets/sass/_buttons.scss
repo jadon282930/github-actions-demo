@@ -1,0 +1,164 @@
+.btn {
+    @extend .fs_14;
+    line-height: 2rem;
+    @extend .text_center;
+    @extend .border_0;
+    @extend .radius_10;
+    @extend .cursor_pointer;
+    @extend .montserrat_regular;
+    color: $white;
+    padding: 1.1rem 2.5rem;
+    background: $dark_silver;
+    @include transition(all .3s ease-in-out);   
+    font-weight: 600;
+    &:hover{
+        background: rgba($dark_silver, 0.7);
+        color: $white;
+    }
+}
+.btn_default {
+    @extend .fs_14;
+    line-height: 2rem;
+    @extend .text_center;
+    @extend .border_0;
+    @extend .radius_10;
+    @extend .cursor_pointer;
+    color: $gray;
+    padding: 1.1rem 2.5rem;
+    min-width: 15.4rem;
+    background: $light_gray;
+    @include transition(all .3s ease-in-out);
+    &:hover{
+        // color: $white;
+        background: #d1d3d7;
+    }
+}
+.btn_primary {
+    @extend .fs_14;
+    line-height: 2rem;
+    @extend .text_center;
+    @extend .border_0;
+    @extend .radius_10;
+    @extend .cursor_pointer;
+    color: $white;
+    padding: 1.1rem 2.5rem;
+    min-width: 15.4rem;
+    background: $maroon;
+    font-family: 'montserrat_medium';
+    font-weight: 600;
+    @include transition(all .3s ease-in-out);
+    &:hover{
+        background: #9f0622;
+    }
+}
+
+.btn-loader{
+.ant-spin-dot-item {
+    background-color: white !important;
+}
+}
+.btn_loader_red {
+    .ant-spin-dot-item {
+        background-color: #C00C2D !important;
+    }
+}
+.td_status_clinic_list{
+    justify-content: end !important;
+    padding-top: 17px;
+}
+
+.clinic_hover_icon{
+    .ps-code{
+        @include width(20px);
+        height: 20px;
+        display: block;
+        position: relative;
+        &:hover{
+            .reg_code{
+                display: block;
+            }
+        }
+        img{
+            @include image;
+        }
+        .reg_code {
+            display: none;
+            position: absolute;
+            max-width: 170px;
+            min-width: 170px;
+            background: #F8F8F8;
+            box-shadow: 0px 0px 15px rgb(0 0 0 / 25%);
+            border-radius: 5px;
+            padding: 6px 10px;
+            top: -45px;
+            left: -4px;
+            p{
+                font-family: montserrat_medium;
+                font-weight: 600;
+                font-size: 9px;
+                line-height: 12px;
+                letter-spacing: 0.3125px;
+                color: #000000;
+                margin: 0;
+            }
+        }
+    }
+}
+.phy_hover_clinic_auth{
+    .ps-code{
+        @include width(20px);
+        height: 20px;
+        display: block;
+        position: relative;
+        &:hover{
+            .reg_code{
+                display: block;
+            }
+        }
+        img{
+            cursor: pointer;
+        }
+        .reg_code {
+            display: none;
+            position: absolute;
+            max-width: 170px;
+            min-width: 170px;
+            background: #F8F8F8;
+            box-shadow: 0px 0px 15px rgb(0 0 0 / 25%);
+            border-radius: 5px;
+            padding: 6px 10px;
+            top: -38px;
+            left: -4px;
+            p{
+                font-family: montserrat_medium;
+                font-weight: 600;
+                font-size: 9px;
+                line-height: 12px;
+                letter-spacing: 0.3125px;
+                color: #000000;
+                margin: 0;
+            }
+        }
+    }
+}
+
+.terms-condition-sec{
+    max-width: 308px;
+    margin: 0 auto;
+    margin-top: 46px;
+    h5{
+        font-family: 'montserrat_regular';
+        font-size: 14px;
+        font-style: normal;
+        line-height: 19px;
+        letter-spacing: 0.5px;
+        text-align: center;
+        margin: 0;
+        font-weight: 500;
+        a{
+          color: #000000 !important;
+            font-family: 'montserrat_bold';
+            font-weight: 600;
+        }
+    }
+}

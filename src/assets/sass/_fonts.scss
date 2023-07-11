@@ -1,0 +1,59 @@
+@font-face {
+    font-family: montserrat_thin;
+    src: url('../fonts/montserrat_thin.ttf');
+}
+@font-face {
+    font-family: montserrat_light;
+    src: url('../fonts/montserrat_light.ttf');
+}
+@font-face {
+    font-family: montserrat_regular;
+    src: url('../fonts/montserrat_regular.ttf');
+}
+@font-face {
+    font-family: montserrat_medium;
+    src: url('../fonts/Montserrat-Medium.ttf');
+}
+@font-face {
+    font-family: montserrat_semibold;
+    src: url('../fonts/montserrat_semibold.ttf');
+}
+@font-face {
+    font-family: montserrat_bold;
+    src: url('../fonts/montserrat_bold.ttf');
+}
+
+
+@font-face {
+    font-family: raleway_medium;
+    src: url('../fonts/Raleway-Medium.ttf');
+}
+@font-face {
+    font-family: raleway_bold;
+    src: url('../fonts/Raleway-Bold.ttf');
+}
+@font-face {
+    font-family: sf_pro_display;
+    src: url('../fonts/SF-Pro-Display.OTF');
+}
+@font-face {
+    font-family: sf_pro_display;
+    src: url('../fonts/SF-Pro-Display.OTF');
+}
+@font-face {
+    font-family: Roboto;
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+
+.montserrat_thin{font-family: montserrat_thin; letter-spacing: .03rem;}
+.montserrat_medium{font-family: montserrat_medium; letter-spacing: .03rem;}
+.montserrat_light{font-family: montserrat_thin; letter-spacing: .03rem; font-weight: bold;}
+.montserrat_regular{font-family: montserrat_regular; letter-spacing: .03rem;}
+.montserrat_semibold{font-family: montserrat_semibold; letter-spacing: .03rem;}
+.montserrat_bold{font-family: montserrat_bold; letter-spacing: .03rem;}
+
+
+
+.raleway_medium{font-family: raleway_medium; letter-spacing: .03rem;}
+.raleway_bold{font-family: raleway_bold; letter-spacing: .03rem;}
+.sf_pro_display{font-family: sf_pro_display; letter-spacing: .03rem;}

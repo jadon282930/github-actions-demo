@@ -1,0 +1,486 @@
+.input_details{
+    @extend .montserrat_semibold;
+   font-style: normal;
+   font-weight: 600;
+   font-size: 16px;
+   line-height: 20px;                                   
+   letter-spacing: 0.3125px;
+   color: $gray_label;
+   border: none;
+   margin: 13px 0 0 0;
+}
+.forms_details h3{
+    @extend .montserrat_regular;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;    
+    letter-spacing: 0.3125px;
+    color: rgba(89, 89, 89, 0.5);
+    margin: 0;
+}
+
+.physiciandetail{
+    width: calc(100% - 25rem);
+
+     .physiciandetail_nav{
+        @extend .d_flex;   
+        @extend .justify_content_between; 
+        @extend .align_items_center;
+        flex-wrap: wrap;
+        padding: 13px 45px 13px 75px;
+        background: rgba(154, 176, 189, 0.19);
+
+        @include media992{
+            padding:28px 17px 27px 20px;
+           }
+
+        .physiciandetail_nav--block1{
+            padding: 5px 5px 4px;
+            h2{
+                @extend .montserrat_bold;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: 0.3125px;
+                text-transform: uppercase;
+                color: $black;
+
+            }
+        }
+        .physiciandetail_nav--block2{
+            text-align: right;        
+            padding: 5px 5px 4px;
+            .physiciandetail_nav--block2_text h2{
+                margin: 0;
+                @extend .montserrat_regular;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 13px;
+                line-height: 20px;
+                text-align: right;
+                letter-spacing: 0.3125px;
+                color: $text_blue;
+            }
+        }
+    }
+
+    .physiciandetail_data{
+        margin: 0;
+        max-width: 830px;
+        width: 100%;
+        padding: 36px 20px 20px 80px;
+        @media (max-width: 1024px){
+            padding-left: 20px;
+        }
+        .physiciandetail_data_info{
+         @extend .d_flex;
+         @media (max-width: 991px){
+            flex-direction: column-reverse;
+        }
+
+            .physiciandetail_data_name{
+              .forms_details{
+                #physicianfirstname{
+                     @extend .input_details;
+                }
+            }
+        }
+        
+        .edit{
+            padding: 3px 19px;
+            @extend .montserrat_semibold;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 20px;
+            text-align: center;
+            color: #FFFFFF;
+            min-width: 61px;
+            background: #C00C2D;
+            border-radius: 3px;
+        }
+        }
+        #physician_email{
+            @extend .input_details;
+            margin-top: 10px;
+            ul{
+                margin: 0;
+                list-style: none;
+
+                li{
+                    position: relative;
+                    padding: 0 0 8px 10px;
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        background-color: #3E4A58;
+                        width: 4px;
+                        height: 4px;
+                        left: 0;
+                        top: 7px;
+                    }
+                    &:last-child{
+                        padding-bottom: 0;
+                    }
+                }
+            }
+         }
+         .email_div{
+            margin-top: -18px;
+            @media (max-width: 991px){
+                margin-top: 0;
+            }
+        }
+
+         /************************************************************/
+         .bio{
+             max-width: 610px;
+             margin-bottom: 0;
+            @media (max-width: 991px){
+                max-width: 100%;
+            }
+              textarea{
+                width: 100%;
+                height: 236px;
+                margin: 0;
+             }
+            div h5{
+                margin-bottom: 10px;
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 20px;                            
+                letter-spacing: 0.3125px;
+                color: rgba(89, 89, 89, 0.5);
+
+            }
+            }
+    }
+}
+
+.physicianDetailsPop{
+    max-width: 956px !important;
+    width: 100% !important;
+    max-height: 100vh !important;
+    background-color: unset;
+    box-shadow: unset;
+    .ant-modal-content{
+        margin: 0;
+    }
+    .pd_block{
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+}
+
+.physician_detail{
+    h4{
+        @extend .montserrat_regular;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        text-transform: capitalize;
+        color: #25282C;
+        margin-bottom: 30px;
+    }
+}
+// physician detail popup
+.main_physician_details{
+    max-width: 670px;
+    width: 100%;
+    display: flex;
+    padding: 0 10px 0 100px;
+    align-items: flex-start;
+    .profile_label{
+        font-weight: 600;
+    }
+    .form_row{
+        margin-bottom: 24px;
+        @media (max-width: 600px) {
+            &{
+                .clinic_data{
+                    &:first-child{
+                        padding: 0 0 10px !important;
+                    }
+                    &:nth-child(2){
+                        padding: 10px 0 0 !important;
+                    } 
+                }
+            }
+        }
+    }
+    .form_group.profile {
+        max-width: 120px;
+        width: 100%;
+        padding: 0 20px 0 0;
+        .user_profile_pic{
+            max-width: 100px;
+            width: 100%;
+            height: 100px;
+            img{
+                @include image;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 100%;
+            }
+        }
+    }
+    .form.form_group.details{
+        width: calc(100% - 120px);
+        padding-left: 20px;
+        .forms_details_box{
+            .clinic_data{
+                width: 50%;
+                &:first-child{
+                    padding-right: 5px;
+                }
+                &:nth-child(2){
+                    padding-left: 5px;
+                }
+            
+            }
+            .clinic_name_wrap{
+                &:not(:last-child){
+                    margin-bottom: 22px;
+                }
+                .clinic_data{
+                    width: 100%;
+                }
+            }
+            h3.forms_details{
+                margin-bottom: 10px;
+            }
+            h3.forms_details, p.forms_details_text{
+                @extend .montserrat_regular;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: 0.3125px;
+                color: #595959;
+            }
+            p.forms_details_text{
+                text-transform: unset;
+                font-size: 16px;
+                @extend .montserrat_semibold;
+                margin-bottom: 0;
+            }
+        }
+    }
+    .main_degrees_div{
+        p{
+            padding-right: 5px;
+        }
+    }
+    .main_bio{
+        p.forms_details_text {
+            margin-bottom: 30px !important;
+        }
+    }
+    .main_list{
+        display: flex;
+        flex-wrap: wrap;
+        ul{
+            list-style: none;
+            margin: 0;
+            padding-right: 5px;
+            &:last-child{
+                li{
+                    padding-right: 5px;
+                    &::after{
+                       content: "";
+                       position: absolute;
+                       background-color: #fff;
+                       height: 100%;
+                       width: 10px;
+                       right: 0;
+                       top: 0;
+                    }
+                }
+            }
+            li{
+                position: relative;
+                @extend .montserrat_semibold;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 20px;
+                letter-spacing: 0.3125px;
+                color: #595959;
+            }
+        }
+    }
+    .physician_btn{
+        margin-top: 160px;
+    }
+    @media (max-width: 991px){
+        &{
+            .physician_btn{
+                margin-top: 50px;
+            }
+        }
+    }
+    @media (max-width: 768px){
+        padding: 0 10px;
+        flex-direction: column;
+        .form_group.profile{
+            margin: 0 auto 20px;
+            padding-right: 0;
+        }
+        .form.form_group.details{
+            width: 100%;
+            padding-left: 0;
+        }
+    }
+}
+
+// ps details popup
+.physiciandetail_data{
+    .forms_details{
+        margin-bottom: 0;
+    }
+    .physiciandetail_data_name{
+        margin-bottom: 22px;
+    }
+    .main_ps_details{
+        display: flex;
+        max-width: 475px;
+        width: 100%;
+        padding-right: 30px;
+        @media (max-width: 1200px){
+            padding-right: 10px;
+        }
+        .physiciandetail_data_name{
+            width: 50%;
+            margin-bottom: 18px;
+            &:first-child{
+                padding-right: 10px;
+            }
+            &:nth-child(2){
+                padding-left: 10px;
+            }
+        }
+        @media (max-width: 991px){
+            &{
+                max-width: 100%;
+                padding-right: 0;
+            }
+        }
+    }
+    .main_ps_profile {
+        width: calc(100% - 475px);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-left: 30px;
+        @media (max-width: 1200px){
+            padding-left: 10px;
+        }
+        @media (max-width: 991px){
+            justify-content: center;
+            width: 100%;
+            padding: 0 0 20px 0;
+        }
+        .physiciandetail_data_pic{
+            padding: 0 20px 10px 0;
+        }
+        .sub_transfer_patients{
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+    }
+    .main_psd_data {
+        max-width: 420px;
+        width: 100%;
+        @media (max-width: 991px){
+            &{
+                max-width: 100%;
+            }
+        }
+    }
+    .psd_contact_info{
+        display: flex;
+        .physiciandetail_data_name{
+            width: 50%;
+            &:first-child{
+                padding-right: 10px;
+            }
+            &:nth-child(2){
+                padding-left: 10px;
+            }
+        }
+    }
+    .bio{
+        .psd_bio_txt{
+            padding: 10px 0 40px 0;
+            p{
+                @extend .montserrat_semibold;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 20px;
+                color: #3E4A58;
+                &:last-child{
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+.psd_link_block{
+    a{
+        @extend .montserrat_regular;
+        @include width(200px);
+        display: block;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 20px;
+        text-align: right;
+        letter-spacing: 0.3125px;
+        @media (max-width: 1200px) {
+            max-width: 250px;
+        }
+    }
+}
+.physician_degress{
+    text-transform: uppercase;
+    position: relative;
+    &:last-child::after{
+        content: "";
+        position: absolute;
+        background-color: #fff;
+        height: 100%;
+        width: 10px;
+        right: 0;
+        top: 0;
+    }
+}
+
+.patients_name_email{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 100%;
+
+}
+.inner_phy_content{
+    margin-bottom: 6px;
+    .inner_div{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        .form_group {
+            margin-bottom: 0rem;
+        }
+        span{
+            @extend .montserrat_regular;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 20px;
+            letter-spacing: 0.3125px;
+            color: #636363;
+            display: inline-block;
+        }
+
+    }
+}

@@ -1,0 +1,113 @@
+html{font-size: 10px;}
+
+body{
+    @extend .montserrat_regular;
+    @extend .fs_14;
+    line-height: 2rem;
+    color: $black;
+    background-color:$white;
+    min-width:30rem;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    -ms-font-smoothing:antialiased; 
+    -webkit-backface-visibility:hidden;
+}
+
+*,:after,:before{
+    @include boxSizing(border-box);
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{
+    @extend .d_block;
+}
+body,dd,div,dl,dt,form,h1,h2,h3,h4,h5,h6,img,input,li,ol,p,span,table,tbody,td,textarea,th,thead,tr,ul, select{
+    word-wrap:break-word;
+    outline:0; 
+    @extend .m_0;
+    @extend .p_0; 
+    -webkit-tap-highlight-color:transparent;
+}
+textarea{
+    overflow:auto;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+dd,dl,dt,h1,h2,h3,h4,h5,h6,ol,p,ul{
+    -webkit-margin-before:0;
+    -webkit-margin-after:0;
+    -webkit-margin-start:0;
+    -webkit-margin-end:0;
+}
+a img,img{
+    border:none;
+    outline:0;
+}
+button,input[type=button],input[type=reset],input[type=submit]{
+    @include appearance(none);
+    @extend .cursor_pointer;
+}
+a{
+    @extend .cursor_pointer;
+    text-decoration:none;
+    outline:0;
+    color: $black;
+    // &:hover{
+    //     color: $white;
+    // }
+}
+:hover,a:hover{
+    outline:0;
+    text-decoration:none;
+}
+a, button, [type="submit"], [type="button"] {
+    @include transition(all 0.3s ease-in-out);
+}
+input{
+    box-shadow: none !important;
+}
+input:not([type="radio"], [type="checkbox"]){
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    @extend .montserrat_regular;
+    @include appearance(none);
+}
+input::placeholder{
+    @extend .montserrat_regular;
+}
+::selection{
+    text-shadow:none;
+    background:rgba($dark_blue,.3);
+}
+input.form_control:focus, textarea:focus, select:focus {
+    border: 2.5px solid #1784E9;
+}
+.clear{
+    clear:both;
+    height:0;
+    overflow:hidden;
+    width:auto;
+    @extend .d_block;
+    float: none!important;
+}
+dir,menu,ul{ 
+    @extend .m_0;
+    @extend .p_0;
+    @extend .d_block;
+    -webkit-margin-before:0;
+    -webkit-margin-after:0;
+    -webkit-margin-start:0;
+    -webkit-margin-end:0;
+    -webkit-padding-start:0;
+}
+.loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.delete_phy_tooltip {
+    .ant-tooltip-content{
+        .ant-tooltip-arrow{
+            left: 74% !important;
+        }
+    }
+}

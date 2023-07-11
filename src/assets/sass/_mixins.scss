@@ -1,0 +1,118 @@
+@mixin boxSizing($property){
+    -moz-box-sizing:    $property;
+    -webkit-box-sizing: $property;
+    box-sizing:         $property;
+}
+
+@mixin appearance($property){
+    -webkit-appearance: $property; /* Safari & Chrome */
+    -moz-appearance:    $property; /* Firefox */
+    -o-appearance:      $property; /* Opera */
+    appearance:         $property;
+}
+
+@mixin transform($property){
+    -webkit-transform:  $property; /* Safari & Chrome */
+    -moz-transform:     $property; /* Firefox */
+    -ms-transform:      $property;
+    -o-transform:       $property; /* Opera */
+    transform:          $property;
+}
+
+@mixin transition($property){
+    -webkit-transition: $property; /* Safari & Chrome */
+    -moz-transition:    $property; /* Firefox */
+    -ms-transition:     $property;
+    -o-transition:      $property; /* Opera */
+    transition:         $property;
+}
+
+@mixin boxShadow($property){
+    -webkit-box-shadow: $property; /* Safari & Chrome */
+    -moz-box-shadow:    $property; /* Firefox */
+    -ms-box-shadow:     $property;
+    -o-box-shadow:      $property; /* Opera */
+    box-shadow:         $property;
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin image {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+}
+@mixin width($maxWidth) {
+    max-width: $maxWidth;
+    width: 100%;
+}
+
+@mixin position($position) {
+    position: $position;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+ @mixin inlineBlock {
+     display: inline-block;
+     vertical-align: top;
+ }
+
+@mixin  scrollbar {
+    &::-webkit-scrollbar {
+        width: 3px;
+        height: 4px;
+        border-radius: 20px;
+      }
+      &::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      &::-webkit-scrollbar-thumb {
+        background: #C4C4C4; 
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background: #C4C4C4 ; 
+      }
+}
+
+@mixin comman_scrollbar_firefox($fcolor, $scolor) {
+    scrollbar-color: $fcolor $scolor ;
+    scrollbar-width: thin ;
+}
+ 
+@mixin media1600{
+    @media (max-width: 1600px) {
+        @content;
+       }
+}
+@mixin media1440{
+    @media (max-width: 1440px) {
+        @content;
+       }
+}
+@mixin media1200{
+    @media (max-width: 1200px) {
+        @content;
+       }
+}
+@mixin media1140{
+    @media (max-width: 1140px) {
+        @content;
+       }
+}
+
+@mixin media1024{
+    @media (max-width:1024px) {
+        @content;
+       }
+}
+
+@mixin media992{
+    @media (max-width: 992px) {
+        @content;
+       }
+}

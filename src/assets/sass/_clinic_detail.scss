@@ -1,0 +1,916 @@
+.billing_details_main{
+    max-width: 1390px;
+    width: 100%;
+    padding: 6px 20px 30px 90px;
+    @media (max-width: 1680px){
+      &{
+        max-width: 1235px;
+      }
+    }
+    @media (max-width: 1400px){
+      &{
+        padding: 6px 20px 30px 40px;
+      }
+    }
+    @media (max-width: 1200px){
+      &{
+        padding: 6px 20px 30px 20px;
+      }
+    }
+    @media (max-width: 991px){
+      &{
+        padding: 20px 20px 30px 20px;
+      }
+    }
+}
+.forms_details{
+    margin-bottom: 2px;
+    @extend .montserrat_regular ;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3125px;
+    color: rgba(89, 89, 89, 0.5);
+}
+
+.clinic_detail{
+    width:calc( 100% - 250px );
+    .clinic_detail_heading{
+       background: rgba(154, 176, 189, 0.19);
+          .clinic_detail_heading_box {
+            @extend .d_flex;
+            @extend .justify_content_between;
+            flex-wrap: wrap;
+            max-width: 1390px;
+            width: 100%;     
+            padding: 27px 20px 28px 80px;
+            &.sub-heading_block{
+              padding: 26px 15px 27px 75px;
+            }
+            @media (max-width: 1680px){
+                &{
+                  max-width: 1235px;
+                }
+            }
+            .clinic_detail_heading_text h2{
+              @extend .montserrat_regular;    
+              font-style: normal;
+              font-weight: bold;
+              font-size: 14px;
+              line-height: 20px;
+              letter-spacing: 0.3125px;
+              text-transform: uppercase;
+              color: $black;
+              margin: 0;
+              &.licenses_title{
+                text-transform: unset;
+              }
+            }
+            .clinic_detail_heading_text{
+              padding: 0 5px;
+            }
+            @media (max-width: 1100px){
+                    &{
+                      padding: 20px !important;
+                      h2{
+                        padding: 2px;
+                      }
+                    }
+            }
+            .reg_code-span{
+              font-family: montserrat_bold;
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 20px;
+              letter-spacing: 0.3125px;
+              color: #C00C2D;
+              padding-left: 50px;
+              @media (max-width: 1500px) {
+                padding-left: 5px;
+              }
+            }
+          }
+    }
+.clinic_details_flex{
+            max-width: 1390px;
+            width: 100%;
+            padding: 30px 20px 10px 90px;
+            @media (max-width: 1680px){
+              &{
+                max-width: 1235px;
+              }
+            }
+            @media (max-width: 1400px){
+              &{
+                padding: 30px 20px 10px 40px;
+              }
+            }
+            @media (max-width: 1200px){
+              &{
+                padding: 30px 20px 10px 20px;
+              }
+            }
+            @media (max-width: 991px){
+              &{
+                flex-direction: column;
+              }
+            }
+            @extend .d_flex;
+                  .clinic_details_flex--block1{
+                    width: 50%;
+                    padding-right: 31px;
+                    @media (max-width: 1400px){
+                      &{
+                         padding-right: 20px;
+                      }
+                    }
+                    @media (max-width: 991px){
+                      &{
+                        width: 100%;
+                        padding: 0;
+                      }
+                    }
+                       #form{
+                         padding-left: 27px;
+                         .forms_details{
+                           @extend .d_flex;
+                          justify-content: space-between;
+                        }
+                         .clinic_name_wrap{
+                          @extend .d_flex;
+                            .clinic_data {
+                              width: 100%;
+                              &:first-child{
+                                padding-right: 10px;
+                              }
+                              &:nth-child(2){
+                                padding-left: 10px;
+                              }
+                              .forms_details{
+                                display: block;
+                                width: 100%;
+                              }
+                            .forms_details_text{
+                              width: 100%;
+                              margin:12px 28px 27px 0;
+                              @extend .montserrat_regular;
+                              @extend .comman_css;
+                              color: $gray_label;
+                             }
+                         }
+                        }
+                          .edit{
+                            font-family: montserrat_medium;
+                            font-weight: 500;
+                            @extend .text_center;
+                            background: $maroon;
+                            color: $white;
+                            padding: 3px 17px 3px 19px;
+                            font-size: 12px;
+                            line-height: 20px;      
+                            border-radius: 3px;
+                            border: none;
+                        }
+                          #clinic_name{
+                            margin: 5px 0 30px;
+                            font-family: montserrat_medium;
+                            text-transform: capitalize;
+                            font-weight: 500;
+                            @extend .comman_css;
+                            color: $gray_label;
+                            border: none;
+                                 ::placeholder{
+                                   color:$gray_label;
+                                }
+                        }
+                        
+                      .forms_details_box{
+                        margin: 6px 0 32px;
+                          .clinicname_wrap{
+                            @extend .d_flex;
+                          }
+                            .clinicname_wrap_data{
+                              width: 50%;
+                              .forms_details{
+                                margin:5px 0 13px;
+                              }
+                              .forms_details_text{    
+                                margin-bottom: 22px;
+                                @extend .montserrat_regular;
+                                @extend .comman_css;
+                                color: #595959;
+                                }
+                            
+                          }
+                      }
+
+                      input,.primarycontact h5{
+                        font-family: montserrat_medium;
+                        font-weight: 500;
+                        @extend .comman_css;
+                        color: $gray_label;
+                        border: none;
+                        margin: 10px 0 29px 0;
+                        width: 100%;
+                    }
+                    .primarycontact h5{
+                      margin: 0;
+                    }
+                }
+            
+                  .business_box_heading h5{
+                    display: inline;
+                    padding-left: 27px;
+                    @extend .montserrat_regular;
+                    @extend .comman_css;
+                    margin: 18px 0 7px;
+                    font-size: 14px !important;
+                    color: #595959;
+                  }
+
+                  .business_box{
+                        .business_address_box{
+                              margin: 10px 0 16px;
+                              padding: 18px 36px 38px;
+                              background: #F4F4F4;
+                              @media (max-width: 1200px){
+                                &{
+                                  padding: 20px;
+                                }
+                              }
+
+                              .business_data{
+                                margin-right: 20px;
+                                .clinic_data{
+                                  width: 100%;
+                                }
+                              }
+                              .business_addr{
+                                width: 100%;
+                                max-width: 173px;
+                                margin: 0;
+                                &:first-child{
+                                  padding-right: 10px;
+                                }
+                                &:nth-child(2){
+                                  padding-left: 10px;
+                                }
+                              }
+                              .state_street, .country{
+                                margin: 0;
+                                p{
+                                  margin: 5px 0 18px !important;
+                                }
+                              }
+                              // .country{
+                              //   padding-right: 10px;
+                              //   width: 60%;
+
+                              // }
+                              // .state_street{
+                              //   width: 40%;
+                              //   padding-left: 10px;
+                              // }
+
+                              .country{
+                                width: 100%;
+                                max-width: 173px;
+                                margin: 0;
+                                padding-right: 10px;
+                                //width: 60%;
+                              }
+                              .state_street{
+                                width: 100%;
+                                max-width: 173px;
+                                margin: 0;
+                                //width: 40%;
+                                padding-left: 10px;
+                              }
+                              @media (max-width: 1600px) {
+                                .country, .state_street{
+                                  width: 50%;
+                                }
+                              }
+                              .businessforms_details{
+                                          margin-bottom: 5px;
+                                          @extend .montserrat_regular;
+                                          font-style: normal;
+                                          font-weight: 600;
+                                          font-size: 13.5px;
+                                          line-height: 16px;
+                                          color: rgba(89, 89, 89, 0.5);
+                              }
+                              #street{
+                                margin:5px 0 20px;
+                                @extend .montserrat_regular;
+                                @extend .comman_css;
+                                color: #595959;
+                                @media (max-width: 1200px){
+                                                    &{
+                                                      font-size: 14px;
+                                                    }
+                                }
+                              }
+                              #city,#zipcode{
+                                margin:12px 0 22px;
+                                @extend .montserrat_regular;
+                                @extend .comman_css;
+                                color: #595959;
+                              }
+                              #country,#state{
+                                margin:12px 0 22px;
+                              }
+                              input{
+                                background: transparent;
+                                width: 100%;
+                                @extend .montserrat_semibold;
+                                @extend .comman_css;
+                                color: $gray_label;
+                                border: none;
+                              }
+                        }
+                        &:last-child {
+                          .business_address_box{
+                            margin-bottom: 0;
+                          }
+                        }
+                  }
+                }
+              .clinic_details_flex--block2{
+                                width: 50%;
+                                 padding-left: 31px;
+                                 @media (max-width: 1400px){
+                                   &{
+                                      padding-left: 20px;
+                                   }
+                                 }
+                                 @media (max-width: 991px){
+                                  &{
+                                    width: 100%;
+                                    padding: 20px 0 0 0;
+                                  }
+                                }
+                                   .authorized_users{
+                                     background: #EEEEEE;
+                                     .authorized_users_head{
+                                        @extend .d_flex;
+                                        @extend .align_items_center;
+                                        @extend .justify_content_center;
+                                        justify-content: flex-end;
+                                        padding: 7px 20px;
+                                        background: #9BA1AB;
+                                        border-radius: 5px 5px 0 0;
+                                        background: #9BA1AB;
+                                          .authorized_users_head_heading{
+                                                width: 100%;
+                                              h4{ 
+                                                font-family: montserrat_semibold;
+                                                font-weight: 500 !important;
+                                                @extend .text_center;
+                                                @extend .comman_css;
+                                                text-transform: capitalize;
+                                                letter-spacing: 0.9px;
+                                                font-size: 14px !important;
+                                                color: $white;
+                                                margin: 0;
+                                            }
+                                          }
+                                              .add{
+                                                padding: 3px 18px;
+                                                font-family: montserrat_semibold;
+                                                font-weight: 500 !important;
+                                                @extend .text_center;
+                                                font-size: 12px;
+                                                line-height: 20px;
+                                                color: rgba(0, 0, 0, 0.5);
+                                                border-radius: 3px;
+                                                border: none;
+                                                background: $white;
+                                            }
+                                              .add_grey{
+                                                background: rgba(251, 251, 251, 0.5);
+                                            }
+                                            .authorized_users_head_heading{
+                                              width: calc(100% - 65px);
+                                            }
+                                            .add_main {
+                                              max-width: 64px;
+                                              width: 100%;
+                                          }
+                                      }
+                                      .main_physicians_users_table{
+                                          overflow: auto;
+                                          height: 482px;
+                                      }
+                                      .main_authorized_table {
+                                          overflow: auto;
+                                          height: 320px;
+                                      }
+                                      .authorized_users_table{
+                                              width: 100%;
+                                              border-collapse: collapse;
+                                              th{
+                                                line-height: 13px !important;
+                                              }
+                                              td {
+                                                padding: 10px 5px;
+                                              }
+                                              .primarycontactheading{
+                                                width: 10%;
+                                                @extend .montserrat_regular;
+                                                @extend .comman_css;
+                                                padding: 8px 0;
+                                                font-size: 10px !important;
+                                                text-transform: capitalize;
+                                                color: #495668;
+                                              }
+                                              .blank{
+                                                    width: 0%;
+                                              }
+                                              .addon{
+                                                  width: 26%;
+                                                  @extend .primarycontactheading;
+                                              }
+                                              .action_heading{  
+                                                  width: 24%;
+                                                  text-align: right;
+                                                  padding: 8px 20px;
+                                                  @extend .primarycontactheading;
+
+                                              }
+                                      }
+                          
+                                          .authorized_users_data{
+                                                background: #DADADA;
+                                          }
+                                          .authorized_users_data:nth-child(even){
+                                                background: #F8F8F8;
+                                          }
+
+                                          .authorized_users_data_info{
+                                                list-style: none;
+                                                .authorized_users_name h4{
+                                                  text-align: left;
+                                                  font-family: montserrat_semibold;
+                                                  font-weight: 500 !important;
+                                                  text-transform: unset;
+                                                  @extend .comman_css;
+                                                  font-size: 12px !important;
+                                                  color: #2D2D2D;
+                                                  margin: 0;
+                                                  text-transform: capitalize;
+                                                }
+                                                .authorized_users_email h5,.authorized_users_contact h5{
+                                                  @extend .montserrat_regular;
+                                                  @extend .comman_css;
+                                                  font-size: 12px !important;
+                                                  color: #636363;
+                                                }
+                                          }
+                                          .alert{
+                                                padding: 8px !important;
+                                          }
+                                          .addon_date{
+                                                vertical-align: baseline;
+                                                text-align: center;
+                                                font-family: montserrat_semibold;
+                                                font-weight: 500 !important;
+                                                @extend .comman_css;
+                                                font-size: 12px !important;
+                                                color: #2D2D2D;
+                                                
+                                          }
+                                          .td_icons{
+                                            text-align: right;
+                                          }
+                                          .td_checkbox, .td_icons{
+                                                vertical-align: top;
+                                          }
+                                          .authorized_users_checkbox{
+                                                margin: auto  ;
+                                                @extend .justify_content_center;
+                                          }
+                                         
+                                          .authorized_users_data_img{
+                                            line-height: 1;
+                                            display: inline-block;
+                                                padding-right: 12px;
+                                                .user_option{
+                                                  line-height: 1;
+                                                  display: inline-block;
+                                                  cursor: pointer;
+                                                  margin: 3px;
+                                                  vertical-align: bottom;
+                                                  img{
+                                                    line-height: 1;
+                                                    display: inline-block;
+                                                  }
+                                                }
+                                          }
+                                          .invite_div{
+                                              .invite{
+                                                margin-top: 5px;
+                                          }
+                                          }
+                                        }
+                                      .physicians{ 
+                                          margin-top: 42px;
+                                          @extend .authorized_users;
+                                        .physicians_users_head{
+                                          background: $dark_blue;
+                                          @extend .authorized_users_head;
+                                          @extend .d_flex;
+                                          @extend .justify_content_center;
+                                          @extend .align_items_center;
+                                          .authorized_users_head_heading{
+                                            width: 100%;
+                                          }
+                                        }
+                                        @media (max-width: 991px){
+                                          margin-top: 20px;
+                                        }
+                                      }
+                                      .physicians_addon{
+                                        @extend .addon;
+                                      }                                      
+                                      .physicians_action_heading{ 
+                                        @extend .action_heading;
+                                          padding:5px 20px; 
+                                          width: 23%; 
+                                          text-align: right; 
+                                      }
+              }
+}
+}
+.billing_heading h4, .curr_bill h4{
+    @extend .montserrat_regular;
+    @extend .text_left;
+    @extend .comman_css;
+    margin: 0 0 12px 30px;
+    font-size: 14px !important;
+    color: #595959;
+    text-transform: capitalize;
+}
+.billing_details{
+  background: #F4F4F4;
+  height: 348px;
+  overflow-y: auto;
+  .curr_bill h4{
+      padding:20px 25px 8px;
+      font-family: montserrat_bold;
+      font-weight: 600;
+      color: $dark_blue;
+      margin: 0;
+      text-transform: unset;
+      @media (max-width: 768px) {
+        padding:20px 10px 8px;
+      }
+  }
+  .additional_charges{
+    font-family: montserrat_semibold;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.3125px;
+    text-decoration-line: underline;
+    color: #457B9D;
+    padding-top: 10px;
+    display: block;
+    @media (max-width: 1024px) {
+      padding-top: 2px;
+    }
+  }
+  .curr_bill_details{
+    //background: #E5E8EB;
+    border-radius: 3px;
+    padding: 4px 25px 17px;
+    .curr_bill_details_text{
+      @extend .d_flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .curr_bill{
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          // width: 33%;
+          // @media (max-width: 1200px){
+          //   &{
+          //     width: 50%;
+          //   }
+          // }
+          // @media (max-width: 991px){
+          //   &{
+          //     width: 100%;
+          //   }
+          // }
+      }
+      h6, a{
+        font-family: montserrat_semibold;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.3125px;
+        color: #595959;
+        display: inline-block;
+        margin: 0 0 8px;
+      }
+      .curr_partleft{
+        width: 26.5%;
+        @media (max-width: 1300px) {
+          width: 40%;
+          h6{
+            margin-top: 0;
+         }
+        }
+        h6{
+            padding-right: 10px;
+        }
+      }
+      .curr_partright {
+        width: 73.5%;
+        @media (max-width: 1680px) {
+          width: 71.5%;
+        }
+        @media (max-width: 1300px) {
+          width: 60%;
+        }
+      }
+      @media (max-width: 1100px) {
+        .curr_partright, .curr_partleft{
+          width: 100%;
+        }
+      }
+      .btn.btn_primary{
+        font-family: 'montserrat_medium';
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 20px;
+        text-align: center;
+        padding: 5px 9px;
+        color: #FFFFFF;
+        min-width: auto;
+        @include width(135px);
+      }
+      .curr_bill_details_text2{
+        &:not(:last-child){
+          margin-bottom: 10px;
+        }
+        h6, a{
+          margin: 0;
+          padding-right: 10px;
+        }
+        a{
+          font-size: 12px;
+          color: #3079EF;
+        }
+      }
+    }
+    .projectedcost h6{
+      margin: 15px 0 0 0;
+      @extend .montserrat_regular;
+      @extend .comman_css;
+      font-size: 12px !important;
+      color: #595959;
+    }
+    @media (max-width: 768px) {
+      padding: 16px 10px 17px;
+    }
+  }
+  .pastinvoice_main{
+    display: block;
+    width: 100%;
+    // padding: 30px 0 80px 0;
+    padding: 0 0 30px;
+    .past_invoices{
+     display: flex;
+      @include width(100%);
+      h6{
+        &:first-child{
+          @include width(174px);
+        }
+        &:nth-child(2){
+          width: calc(100% - 172px);
+          padding-left: 10px;
+        }
+      }
+    }
+    .invoices_date{
+      padding: 12px 10px 0 25px;
+
+      .sub_invoice-block{
+        display: flex;
+        width: 100%;
+      }
+      .date{
+        @include  width(156px);
+        padding-right: 10px;
+      }
+      span{
+
+        display: block;
+        font-family: montserrat_regular;
+        font-weight: 400;
+        @extend .comman_css;
+        font-size: 12px !important;
+        color: #000000;
+        &:not(:last-child){
+          padding-bottom: 17px;
+        }
+      }
+    }
+    .total_charged{
+      width: 100%;
+      h6{
+        padding-left: 10px;
+      }
+      .charges{
+        max-width: 250px;
+        width: 100%;
+        padding: 12px 10px 25px;
+
+      }
+      .charges_row{
+        @include  width(250px);
+        display: flex;
+        justify-content: space-between;
+        &:not(:last-child){
+          padding-bottom: 17px;
+        }
+        span, .viewinvoice{
+          display: block;
+          font-family: montserrat_regular;
+          font-weight: 600;
+          @extend .comman_css;
+          font-size: 12px !important;
+          color: #000000;
+        }
+        .viewinvoice{
+          text-decoration-line: underline;
+          color: #3079EF;
+          font-family: montserrat_regular;
+        }
+      }
+    }
+    h6{
+      font-family: montserrat_regular;
+      font-weight: 500;
+      padding: 0 10px 8px 25px;
+      border-bottom: 1px solid #C9C9C9;
+      @extend .comman_css;
+      font-weight: 400;
+      font-size: 12px !important;
+      color: #457B9D;
+      margin: 0;
+    }
+    @media (max-width: 768px){
+      &{
+        flex-direction: column;
+        .past_invoices{
+          max-width: 100%;
+          .invoices_date{
+            padding: 12px 10px 20px 10px;
+          }
+        }
+        .total_charged{
+          width: 100%;
+          .charges{
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }                  
+}  
+.nodata{
+  font-family: montserrat_medium;
+  font-weight: 500;
+}
+ .billing_details{
+     background: #F4F4F4;
+     .curr_bill h4{
+         padding:20px 25px 10px;
+         font-weight: bold;
+         color: $dark_blue;
+         margin: 0;
+         text-transform: unset;
+     }
+     .curr_bill_details{
+       margin: 0 16px 30px;
+       background: #E5E8EB;
+       border-radius: 3px;
+       padding: 11px 9px 7px;
+       //.curr_bill_details_text{
+           .curr_bill{
+             @extend .d_flex;
+             flex-wrap: wrap;
+             h6{
+               width: 33%;
+               @media (max-width: 1200px){
+                 &{
+                   width: 50%;
+                 }
+               }
+               @media (max-width: 991px){
+                 &{
+                   width: 100%;
+                 }
+               }
+             }
+
+           }
+           .curr_bill_details_text1 h6{
+             @extend .montserrat_regular;
+             @extend .comman_css;
+             font-size: 12px !important;
+             color: $gray_label;
+             margin-bottom: 3px;
+             margin-right: 32px;
+           }
+           .curr_bill {
+             h6{
+             @extend .montserrat_regular;
+             @extend .comman_css;
+             text-align: left;
+             font-size: 12px !important;
+             color: $gray_label;
+               margin: 0;
+               padding-bottom: 4px;
+           }
+         }
+       //}
+       .projectedcost h6{
+         margin: 15px 0 0 0;
+         @extend .montserrat_regular;
+         @extend .comman_css;
+         font-size: 12px !important;
+         color: #595959;
+       }
+     }
+ }
+.primarycontact_box{
+  text-align: center;
+  .primarycontact_heading h5{
+    @extend .montserrat_regular;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #000000;
+  }
+  .primarycontact_subheading p, .primarycontact_text h6{
+    margin: 27px 0 29px;
+    @extend .montserrat_regular;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;                                                                 
+    text-align: center;
+    color: #495568;
+  }
+  .primarycontact_text h6{
+    margin: 0 0 23px;
+    font-weight: 600;
+    color: #000000;
+  }
+  #password{
+    padding: 11px 10px;
+    width: 328px;
+    background: #F8F8F8;
+    border: 1.5px solid #DEDEDE;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  #icon_hide_password{
+    margin-left: -30px;
+    cursor: pointer;
+  }
+  .warning{
+    text-align: center;
+    margin: 10px auto 24px;
+    @extend .montserrat_regular;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    align-items: center;
+    text-align: center;
+    color: #C00C2D;
+  }
+  .buttons{
+    @extend .d_flex;
+  }
+}
+.authorized_users , .physicians{
+  th{
+      position: sticky;
+      top: 0;
+      background-color: #eeeeee;
+      z-index: 99;
+  }
+}                
+.comman_css  {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;                           
+  letter-spacing: 0.3125px;
+}

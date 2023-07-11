@@ -1,0 +1,791 @@
+.schedulepatient{
+    width: calc( 100% - 250px);
+        .schedulepatient_nav{
+        background: rgba(154, 176, 189, 0.19);
+        @extend .d_flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 7px 62px 7px 48px;
+        @include media1600 {
+            padding: 7px 52px 7px 38px;
+         }
+                
+         @media (max-width: 1500px){
+            padding: 7px 20px;
+        }
+        .searchbar{ 
+             position: relative;
+            img{
+                position: relative;
+                top: auto;
+                left: 35px;
+            }
+            #search{
+                max-width: 310px !important;
+                width: 100% !important;
+                min-width: 310px;
+                padding-left: 3.3rem !important;
+                background-color: #FFFFFF;
+                box-sizing: border-box;
+                padding: 8px 20px 9px 32px;
+                display: block;
+                min-height: auto !important;
+                color: #C4C4C4;
+                letter-spacing: 0.7px;
+                font-weight: 500;
+                font-family: "montserrat_semibold", sans-serif;
+                border-radius: 2rem;
+                border: 1.5px solid #DEDEDE;
+                &::placeholder{
+                    color: $gray_place;
+                    @extend .montserrat_medium;
+                }
+                @media (max-width: 768px) {
+                    &{
+                        min-width: unset;
+                    }
+                }
+            }
+            &::before{
+                content: url(../images/Search_icon.png);
+                position: absolute;
+                top: 19px;
+                left: 15px;
+            }
+        }
+
+        .switch_box{
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            max-width: 200px;
+            width: 100%;
+              .switch input { 
+                  display:none;
+              }
+              .switch {
+                  display:inline-block;
+                  max-width:42px;
+                  width: 100%;
+                  position:relative;
+              }
+              .slider {
+                max-width: 42px;
+                width: 100%;
+                height: 20px;
+                @include position(absolute);
+                border-radius: 20px;
+                background: #457B9D;
+                cursor: pointer;
+                border: 4px solid transparent;
+                overflow: visible;
+                transition: 0.4s;
+              }
+              .slider:before {
+                  position:absolute;
+                  content:"";
+                  width:26px;
+                  height:26px;
+                  background:#FFFFFF;
+                  border-radius:100px;
+                  top: -8px;
+                  left: -6px;
+                  -webkit-transform:translateX(-0px);
+                  transform:translateX(-0px);
+                  -webkit-transition:.4s;
+                  transition:.4s;
+                  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.23);
+                  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);              }
+              .switch input:checked + .slider:before {
+                  -webkit-transform:translateX(20px);
+                  transform:translateX(20px);
+               }
+              .off{
+                  color: $black;
+                  margin: 0;
+                  @extend .montserrat_regular;
+                  font-weight: 600;
+                  font-size: 12px;
+                  line-height: 20px;
+                  text-align: right;
+                  letter-spacing: 0.3125px;
+                  text-transform: capitalize;
+                  padding-right: 8px;
+              }
+              .on{
+                  color: #959595;
+                  margin: 0;
+                  @extend .montserrat_regular;
+                  font-weight: 600;
+                  font-size: 12px;
+                  line-height: 20px;                  
+                  letter-spacing: 0.3125px;
+                  text-transform: capitalize;
+                  padding-left: 8px;
+                }
+              .switch input:checked ~ .off {
+                  color:  $black;
+              } 
+              .switch input:checked ~ .on {
+                  color: $black;
+              }
+            }
+            .add_appoinment{
+                .add_appoinment_btn{
+                    max-width: 212px;
+                    min-width: 212px;
+                    width: 100%;
+                    @extend .montserrat_semibold;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 20px;
+                    text-align: center;
+                    letter-spacing: 0.3125px;
+                    color: $white;
+                    @include media1600 {
+                        margin-left: 10px;
+                    }
+                    @include media1440 {
+                        margin-left: 0px;
+                    }
+                }
+            }
+            .clinicName{
+                line-height: 1.4;
+                @extend .d_flex;
+                @extend .text_right;
+                flex-direction: column;
+                @include media1440 {
+                    margin-right: 20px;
+                 }
+                 a{
+                     display: block;
+                     max-width: 180px;
+                     width: 100%;
+                 }
+                    .clinicName_text{
+                        @extend .montserrat_medium;
+                        color: $text_blue;
+                        font-weight: 500;
+                        font-size: 13px;
+                        line-height: 20px;
+                        letter-spacing: 0.3125px;
+                     }
+                     @include media1140 {
+                        margin-right: 20px;
+                        text-align: left;
+                     }
+                          
+            }
+}
+
+.schedule_appoinment{
+    @media (max-width: 1024px) {
+        flex-direction: column;
+    }
+    @extend .d_flex;
+
+    .schedule_appoinment--block1{
+        width: 60%;
+        display: flex;
+        flex-wrap: wrap;
+        @media (max-width: 1024px) {
+            width: 100%;
+            margin-bottom: 20px;
+        }     
+        .schedule_appoinment_thead{
+            position: sticky;
+            top: 0;
+            background: #FFFFFF;
+        }
+        .pagination-container {
+            align-self: flex-end;
+        }
+        .prev_appoinment{
+            overflow: auto;
+            width: 100%;
+            align-self: flex-start;
+        .patient_prev_appoinment{
+            width: 100%;
+            border-collapse: collapse; 
+             .patient_prev_appoinment_head{
+                background: rgba(168, 171, 224, 0.37);
+                th {
+                    vertical-align: top;
+                    padding: 13px 20px 10px 10px;
+                    &:first-child{
+                        width: 6%;
+                        padding-left: 45px;
+                        @media (max-width: 1500px) {
+                            padding-left: 10px;
+                            width: 20%;
+                        }
+                    }
+                    &:nth-child(2), &:nth-child(3){
+                        width: 6%;
+                        @media (max-width: 1500px) {
+                            width: 20%;
+                        }
+                    }
+                    &:nth-child(4){
+                        width: 3%;
+                        @media (max-width: 1500px) {
+                            width: 10%;
+                        }
+                    }
+                }
+                .date_head{
+                    text-align: left;
+                    @extend .montserrat_medium;
+                    font-size: 14px;
+                    line-height: 20px;
+                    letter-spacing: 0.3125px;
+                    text-transform: capitalize;
+                    color: $black;
+                }
+                .patient_head{
+                    @extend .date_head;
+                }
+                .email_head{
+                    @extend .date_head;
+                }
+            }
+            .td_sp {
+                padding: 28px 10px 5px !important;
+                vertical-align: baseline;
+                &:first-child{
+                    padding: 28px 10px 5px 48px !important;
+                    @media (max-width: 1500px) {
+                        padding-left: 10px !important;
+                    }
+                }
+            }
+            .date_time{
+                 .date{     
+                    color:$dark_silver;     
+                    @extend .montserrat_medium;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 13px;
+                    line-height: 20px;
+                    letter-spacing: 0.3125px;
+                    margin: 0;
+                }
+                 .time{     
+                    @extend .date;  
+                    @extend .montserrat_bold;
+                    font-style: normal;
+                    font-weight: bold;
+                 }
+             
+            }
+            .patient_name_div{
+                .patient_name{    
+                    font-family: montserrat_medium;   
+                    color: $text_think;     
+                    font-weight: 500;    
+                    font-size: 13px;
+                }
+                .send_messege{ 
+                    margin: 3px 0 0;
+                    @extend .montserrat_bold;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 11px;
+                    line-height: 13px;
+                    text-transform: uppercase;
+                    color: $maroon;
+                    }
+            }
+            .patient_email_div{
+                .patient_email,p{
+                    margin: 0;
+                    @extend .montserrat_medium;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 13px;
+                    line-height: 20px;
+                    letter-spacing: 0.3125px;
+                    color: $text_think;
+                }
+            }
+            .cancel_changes_div{
+                padding: 20px 26px 5px 10px !important;
+                text-align: right;
+                .cancel_changes{
+                    display: inline;
+                    color: $maroon;
+                    cursor: pointer;
+                    @extend .montserrat_bold;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 11px;
+                    line-height: 13px;
+                    text-transform: uppercase;                  
+                    margin-left: 10px;
+                }
+            }
+            .patient_text_wrap{
+                padding: 6px 0 22px;
+            
+            .patient_text{
+                max-width: 618px;
+                width: 100%;
+                margin: 0px 0 0px 48px;
+                color: $text_think;
+                font-family: montserrat_medium;
+                font-weight: 500;
+                font-size: 11px;
+                line-height: 15px;
+                @media (max-width: 1500px) {
+                    margin-left: 10px;
+                }
+            }
+
+            .startbtn_div{
+                margin-top: -5px;
+                 padding: 0 26px 0 70px;
+                }   
+            }
+        }
+    }
+}
+.main_cancle_chngs_block {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.upcoming_appoinment_databox{
+    .tr_start_btn{
+        padding: 0 10px 36px 28px;
+    }
+    tr.patient_info{
+        &:not(:first-child){
+            border-top: 1px solid $gray_place;
+        }
+    }
+}
+.patient_prev_appoinment{
+    .tr_sp_details{
+        &:not(:first-child){
+            border-top: 1px solid $gray_place;
+        }
+    }
+    tbody{
+        border-bottom: 1px solid #C4C4C4;
+    }
+}
+
+        .start{
+            max-width: 110px;
+            border-radius: 30px;
+            @extend .montserrat_bold;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            text-transform: uppercase;
+            min-width: 110px !important;
+            width: 100%;
+            display: block;
+            padding: 10px !important;
+            margin: 20px 0 25px auto;
+        }
+        .tr_start_btn button.btn.btn_primary.start {
+            margin: 0;
+        }
+        .schedule_appoinment--block2{
+                width: 40%;
+                @media (max-width: 1024px) {
+                    width: 100%;
+                }
+                background: #F8F8F8;
+                .calander{
+                    width: 100%;
+                    height: 385px;
+                    padding: 32px 50px 20px;
+                    display: flex;
+                    overflow-y: auto;
+                    overflow-x: hidden;
+                    .time {
+                        display: block;
+                        text-align: center;
+                        font-size: 14px;
+                        line-height: 20px;
+                        color: #45809D;
+                        font-family: "montserrat_medium",sans-serif;
+                        font-weight: 500;
+                        margin-top: 10px;
+                    }
+                    .date_picker_block{
+                        max-width: 274px;
+                        width: 100%;
+                        margin-right: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                    }
+                    .check_appoinemt_block{
+                        width: calc(100% - 274px);
+                        padding: 45px 0 0 25px;
+                    }
+
+                    @media (max-width: 1670px) {
+                        &{
+                            padding: 28px 20px 20px;
+                            .check_appoinemt_block{
+                                padding: 45px 0 0 10px;
+                            }
+                        }
+                    }
+                    @media only screen and (min-width: 1024px) and (max-width: 1300px) {
+                        &{
+                        flex-direction: column-reverse;
+                            .check_appoinemt_block{
+                                width: 100%;
+                                padding: 0 0 10px 10px;
+                            }
+                            .date_picker_block{
+                                max-width: 100%;
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                    @media (max-width: 1024px) {
+                        &{
+                        flex-direction: row;
+                        }
+                    }
+                    @media (max-width: 700px) {
+                        &{
+                            flex-direction: column-reverse;
+                            .check_appoinemt_block{
+                                width: 100%;
+                                padding: 0 0 10px 10px;
+                            }
+                            .date_picker_block{
+                                max-width: 100%;
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                    .pending, .confirmed{
+                        font-size: 12px;
+                        line-height: 20px;
+                        letter-spacing: 0.3125px;
+                        text-transform: capitalize;
+                        color: #000000;
+                        font-weight: 600;
+                        font-family: "montserrat_medium",sans-serif;
+                        padding-left: 15px;
+                        position: relative;
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            width: 5px;
+                            height: 5px;
+                            background: #DB4E4E;
+                            border-radius: 100%;
+                            left: 0;
+                            top: 50%;
+                            transform: translate(0, -50%);
+                        }
+                    }
+                    .pending{
+                        padding-bottom: 2px;
+                    }
+                    .confirmed{
+                    &::before{
+                        background-color: #64BEE4;
+                    }
+                    }
+                    .react-datepicker__header, .react-datepicker{
+                        background-color: unset;
+                        border: none;
+                        border-radius: unset;
+                    }
+                    .react-datepicker__month-container {
+                        position: unset;
+                        max-width: 274px;
+                        width: 100%;
+                    }
+                    .react-datepicker__day-name, .react-datepicker__time-name{
+                        max-width: 35px !important;
+                        width: 100% !important;
+                    }
+                    .react-datepicker__current-month{
+                        font-family: "Gotham",sans-serif;
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 19px;
+                        margin-bottom: 18px;
+                    }
+                    .react-datepicker__day-name{
+                        font-weight: 400;
+                        font-family: "Gotham",sans-serif;
+                        font-size: 10px;
+                        line-height: 12px;
+                        text-align: center;
+                        text-transform: uppercase;
+                        color: #959595;
+                    }
+                    .react-datepicker__day{
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 100%;
+                        display: inline-block;
+                        vertical-align: middle;
+                        line-height: 32px;
+                        font-weight: 500;
+                        font-size: 13px;
+                        text-align: center;
+                        color: #000000;
+                        font-family: "Gotham",sans-serif;
+                        position: relative;
+                        background-color: unset;
+                        z-index: 9;
+                        &:hover::after{
+                            @extend .react-datepicker__day--selected;
+                            background-color: #AEE7FF !important;
+                        }
+                    }
+                    .react-datepicker__day.react-datepicker__day--selected, .react-datepicker__day.react-datepicker__day--keyboard-selected{
+                        color: #fff;
+                        &::after{
+                            @include position(absolute);
+                            content: "";
+                            width: 32px;
+                            height: 32px;
+                            background-color: #457B9D;
+                            left: 50%;
+                            transform: translate(-50%, 0);
+                            z-index: -1;
+                            border-radius: 100%;
+                        }
+                        &::before{
+                            bottom: -3px !important;
+                        }
+                    }
+                    .react-datepicker__navigation-icon::before{
+                        border-color: #000 !important;
+                        border-width: 1px 1px 0 0 !important;
+                    }
+                    .react-datepicker__day.react-datepicker__day--selected{
+                        color: #000;
+                        &::after{
+                            background-color: transparent;
+                        }
+                    }
+                    .react-datepicker__day[tabindex="0"]{
+                        color: #fff;
+                        &::after{
+                            @include position(absolute);
+                            content: "";
+                            width: 32px;
+                            height: 32px;
+                            background-color: #457B9D;
+                            left: 50%;
+                            transform: translate(-50%, 0);
+                            z-index: -1;
+                            border-radius: 100%;
+                        }
+                    
+                    }
+                    .react-datepicker__day.custom-pending, .react-datepicker__day.custom-confirmed{
+                        position: relative;
+                        &::before{
+                            content: "";
+                            @include position(absolute);
+                            top: unset;
+                            background-color: #DB4E4E;
+                            width: 5px;
+                            height: 5px;
+                            margin: 0 auto;
+                            border-radius: 100%;
+                        }                    
+                    }
+                    .react-datepicker__day.custom-confirmed{
+                        &::before{
+                            background-color: #64BEE4;
+                        }
+                    }
+                }
+                .schedule_appoinment_list_part{
+                    display: block;
+                    .schedule_table_block{
+                        overflow: auto;
+                    }
+                }
+        
+                .schedule_appoinment_list{
+                    width: 100%;
+                    border-collapse: collapse; 
+        
+                    .upcoming_schedule_appoinment_list_head{
+                        text-align: left;
+                        background: rgba(168, 171, 224, 0.37);
+                    
+                        th{
+                            padding: 13px 20px 10px;
+                            &:first-child{
+                                padding-left: 28px !important;
+                            }
+                        }
+                        .upcoming_appoinment_time{
+                            width: 20%;
+                            @extend .montserrat_bold;
+                            font-style: normal;
+                            color: $black;
+                            font-weight: bold;
+                            font-size: 11px;
+                            line-height: 20px;
+                            letter-spacing: 0.3125px;
+                        }
+                        .upcoming_appoinment_patient{
+                            width: 30%;
+                            @extend .upcoming_appoinment_time;
+                        }
+                        .upcoming_appoinment_email{
+                            width: 40%;
+                            @extend .upcoming_appoinment_time;
+                        }
+                    }    
+                    .upcoming_appoinment_databox{
+                        tr{
+                            vertical-align: top;
+                        }
+                    }
+                    .timediv{
+                        padding: 20px 20px 20px 28px;
+                    }
+    
+                    .time{
+                        margin: 0;
+                        @extend .montserrat_bold;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 11px;
+                        line-height: 20px;
+                        letter-spacing: 0.3125px;
+                        color: $black;
+                    }
+                    .patient_name{     
+                        font-family: montserrat_medium;
+                        padding: 20px;
+                        color: $black;
+                        font-weight: 500;
+                        font-size: 11px;
+                        line-height: 20px;
+                        letter-spacing: 0.3125px;                   
+                    }
+                    .patient_id{
+                        @extend .patient_name;
+                        position: relative;
+                        p{
+                            margin: 0;
+                        }
+                        .pending{
+                            position: absolute;
+                            top: 0;
+                            right: 50px;
+                            @media (max-width: 1680px){
+                                right: 37px;
+                            }
+                        }
+                    }
+                    .patient_text{
+                        padding: 0px 26px 21px 28px;
+                        font-family: montserrat_medium;
+                        font-weight: 500;
+                        font-size: 11.5px;
+                        line-height: 15px;                                  
+                        color: $black;
+                    }      
+                    .td_cancel_change{
+                        padding: 0 0 20px 28px;
+                    }       
+                    .cancel_change{
+                        @extend .d_flex;
+                        color: $maroon;
+                        text-transform: uppercase;
+
+                        .cancel,.change{
+                            @extend .raleway_bold;
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 11px;
+                            line-height: 13px;
+                            cursor: pointer;
+                            margin: 0;
+                            &:not(:last-child){
+                                padding-right: 14px;
+                            }
+                        }         
+                }      
+                .pending{
+                    width: 63px;
+                    padding: 2px 11px;
+                    @extend .raleway_medium;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 10px;
+                    line-height: 12px;
+                    text-align: center;
+                    color: $white;
+                    background: $dark_silver;
+                    margin-right: 54px;
+                    float: right;
+                }
+                .requested_change{
+                    padding: 2px 10px;
+                    @extend .pending;
+                    width: 116px;
+                    background: $maroon;
+                }
+                .awaiting{
+                    padding: 0 0 0 28px;
+                    width: 176px;
+                    margin-bottom: 18px;
+                    @extend .raleway_bold;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 11px;
+                    line-height: 13px;                           
+                    text-transform: uppercase;
+                    color: $dark_silver;
+                }
+                .border_btm{
+                    border-bottom: 1px solid #C4C4C4;
+                }
+                }
+        }
+    }
+}
+
+.blue_dot, .red_dot{
+    position: relative;
+       &::before{
+        position: absolute;
+        content: "";
+        width: 5px;
+        height: 5px;
+        background-color: #64BEE4;
+        left: -9px;
+        right: auto;
+        top: 7px;
+        bottom: auto;
+        border-radius: 100%;
+    }
+}
+.red_dot{
+    position: relative;
+       &::before{
+               background-color: $maroon;
+        }
+}
+.sp_nav_comman {
+    padding: 10px;
+}

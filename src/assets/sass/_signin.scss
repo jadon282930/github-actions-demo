@@ -1,0 +1,154 @@
+.signin{
+    @extend .position_relative;
+    // .sign_banner{
+    //     @extend .position_relative;
+    //     img{
+    //         width: 100%;
+    //         // height: calc(100vh - 31rem);
+    //         @extend .img_object_center;
+    //     }
+    // }
+    .sigin_banner{
+        height: calc(100vh - 140px);
+        padding-bottom: 190px;
+        position: relative;
+        min-height: 960px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            height: calc(100% - 189px);
+            background: url(../images/signin_banner.jpg) no-repeat;
+            background-position: right top;
+            background-size: cover;
+            z-index: -1;
+            @media (max-width: 1200px) {
+                background-position: top;
+            }
+        }
+        .btn_default, .btn_primary {
+            letter-spacing: 0.8px;
+        }
+        .btn_primary{
+            font-weight: 500;
+        }
+    }
+    .container{
+        @include width(144rem);
+        padding: 0 10px;
+        @extend .mx_auto;
+        .header_logo{
+            @extend .position_absolute;
+            top: 48px;
+            max-width: 1330px;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            padding: 0 30px;
+        }
+    }
+    .sign_box{
+        width: 100%;
+        max-width: 55.4rem;
+        overflow: hidden;
+        box-shadow: 0px 0px 20px rgba(214, 214, 214, 0.5);
+        margin: 0 auto -50px;
+        .account_system{
+            background-color: $dark_blue;   
+            padding: 1.6rem 6.4rem;
+            @media (max-width: 991px) {
+                padding: 1.6rem 2.4rem;
+            }
+            h4{
+                font-size: 20px;
+                letter-spacing: 0.7px;
+                text-transform: uppercase;         
+                color: #FFFFFF;
+                margin: 0;
+                @media (max-width: 991px) {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+        }
+        .admin_sigin{
+            padding: 3.3rem 20px;
+            background: $white;
+            @media (max-width: 991px) {
+                padding: 30px;
+            }
+            .sub_admin-signin{
+                @include width(437px);
+                margin: 0 auto;
+            }
+            h2{
+                margin-bottom: 50px;
+                @media (max-width: 991px) {
+                    margin-bottom: 30px;
+                }
+            }
+            .ant-input{
+                padding-right: 4rem;
+                &:focus{
+                    background: #F8F8F8;
+                    border: 1.5px solid #DEDEDE;
+                }
+                &:-webkit-autofill,
+                &:-webkit-autofill:hover, 
+                &:-webkit-autofill:focus, 
+                &:-webkit-autofill:active{
+                    -webkit-box-shadow: 0 0 0 30px #F8F8F8 inset !important;
+                }
+            }
+            .form_group{
+                margin-bottom: 14px;
+            
+                ::placeholder{
+                    color: $gray_place;
+                }
+                span{
+                    @extend .position_absolute;
+                    right: 1.5rem;
+                    top: 38px;
+                    @extend .cursor_pointer;
+                }
+            }
+        }
+        .btn_primary{
+            min-width: 26.7rem;
+        }
+        input{
+            font-weight: 400;
+            font-family: montserrat_medium;
+            color: #3E4A58 !important;
+            background: #fff ;
+            &::placeholder{
+              font-family: montserrat_medium;
+              font-weight: 400;
+            }
+        }
+        .form_buttons{
+            margin: 52px 0 0;
+            button{
+                font-family: montserrat_medium;
+                font-weight: 500;
+            }
+            @media (max-width: 600px) {
+                margin: 20px 0 !important;
+                button{
+                    min-width: unset;
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+.signin_reset, .signin_submit {
+    font-weight: 600;
+    @extend .montserrat_regular;
+}

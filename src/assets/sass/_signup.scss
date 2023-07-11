@@ -1,0 +1,161 @@
+.signup_clinic{
+    .ant-form-item{
+      margin-bottom: 14px;
+      .ant-form-item-control-input-content{
+        .ant-input-affix-wrapper{
+          background: #fff;
+          border: 1.5px solid #DEDEDE !important;
+          min-height: 4.2rem;
+          width: 100%;
+          padding: 0;
+          border-radius: 1rem;
+          position: relative;
+          input{
+            padding: 10px;
+            border-radius: 1rem;
+            line-height: unset;
+            &:focus{
+              border: none;
+            }
+          }
+          .ant-input-suffix{
+            position: absolute;
+            right: 10px;
+            top: 52%;
+            transform: translate(0, -50%);
+          }
+          &:focus, &.ant-input-affix-wrapper-focused{
+            box-shadow: none;
+          }
+
+        }
+       
+      }
+     
+    }
+    .ant-form-item-has-error :not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper:hover,
+    .ant-form-item-has-error :not(.ant-input-disabled):not(.ant-input-borderless).ant-input:hover,
+    .ant-form-item-has-error :not(.ant-input-disabled):not(.ant-input-borderless).ant-input{
+      border-right-width: 1px !important;
+    }
+    .ant-form-item-label  {
+        padding-bottom: 0 !important;
+        label {
+          margin-bottom: 0.5rem;
+          display: block;
+          font-weight: 600;
+          color: #595959;
+          font-family: 'montserrat_regular';
+          padding-bottom: 5px;
+        }
+      }
+  }
+  .ant-input-filed{
+    .ant-form-item-control-input-content{
+      input{
+        // background: #F8F8F8 !important;
+        border: 1.5px solid #DEDEDE !important;
+        min-height: 4.2rem;
+        width: 100%;
+        padding: 0.8rem 1.5rem;
+        border-radius: 1rem;
+      }
+    }
+  }
+  .resendcode_popup{
+    max-width: 410px;
+    width: 100%;
+    margin: 0 auto;
+    .ant-modal-body {
+      padding: 23px 42px 46px 42px !important;
+    }
+    h3{
+      font-weight: 900;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      text-transform: capitalize;
+      color: #000000;
+      @extend .montserrat_bold;
+      margin-bottom: 16px;
+    }
+    .otpMsg {
+      p.notice{
+        font-family: "raleway_medium",sans-serif;
+      }
+      p.notice, p.resendcode_msg{
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        color: #495568;
+        max-width: 252px;
+        width: 100%;
+        margin: 0 auto 21px;
+      }
+      .form_row{
+        justify-content: center;
+        @media (max-width: 600px){
+          & {
+            flex-direction: unset;
+            .verification_otp{
+              margin-bottom: 20px;
+            }
+          }
+        }
+        .ReactInputVerificationCode__container {
+          max-width: 240px;
+          width: 100%;
+          margin-bottom: 26px;
+      }
+        .ReactInputVerificationCode__item {
+          max-width: 40px;
+          width: 100%;
+          height: 58px;
+          background: #E5E5E5;
+          border-radius: 5px;
+          // box-shadow: none !important;
+          padding: 5px;
+          margin: 4px;
+          font-weight: 600;
+          font-size: 40px;
+          line-height: 42px;
+          color: #000000;
+          @extend .montserrat_bold;
+          @include flex;
+      }
+    }
+    p.resendcode_msg{
+      @extend .montserrat_regular;
+      margin: 0 !important;
+      max-width: unset;
+      text-align: center;
+    }
+    }
+    .resendcode_btn{
+      margin: 26px 0 0;
+    }
+  }
+
+.switch_primary_box{
+  .ant-form-item-control-input-content{
+    .ant-input-password{
+      padding: 0 !important;
+      width: 328px !important;
+      box-sizing: border-box !important;
+      border-radius: 10px !important;
+  }
+  }
+  
+input {
+  padding: 11px 10px;
+  background: #F8F8F8;
+  
+     border: 0 !important;
+  border-radius: 10px;
+}
+.ant-input-suffix {
+  margin-left: 4px;
+  margin-right: 10px;
+}
+}

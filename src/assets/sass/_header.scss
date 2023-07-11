@@ -1,0 +1,195 @@
+.main_herader_row{
+    width: 100%;
+    padding: 11px 30px 10px 36px;
+    margin: 0;
+}
+.header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+    .logo{
+        padding-right: 10px;
+        line-height: 0;
+        @include width(287px);
+        cursor: pointer;
+        img{
+            @include image;
+        }
+    }
+    .header_profile{
+        width: calc(100% - 287px);
+        // max-width: 40rem;
+        padding-left: 10px;
+        @extend .d_flex;
+        @extend .align_items_center;
+        @extend .justify_content_end;
+        line-height: 0;
+        .profile{
+            @extend .d_flex;
+            @extend .align_items_center;
+            &_name{
+                @extend .fs_14;
+                line-height: 2rem;
+                @extend .text_uppercase;
+                color: $black;
+                @extend .fw_600;
+                @extend .mr_1; 
+                display: inline-block;
+                // width: calc(100% - 62px);
+                text-align: right;
+            }
+            &_pic{
+                @extend .mr_1;
+                height: 42px;
+                @include width(42px);
+                @extend .img_object_center;
+                border: .25rem solid $white;
+                @extend .radius_rounded;
+                filter: drop-shadow(0px 4px 25px rgba(0, 0, 0, 0.3));
+                @extend .cursor_pointer;
+                img{
+                    height: 100%;
+                    @include width(100%);
+                    display: block;
+                    @extend .radius_rounded;
+                    object-fit: cover;
+                }
+            }
+        }
+        .drop_down{
+            @extend .mr_2;  
+            @extend .position_relative;
+            &_list{
+                @extend .position_absolute;
+                min-width: 18.4rem;
+                background: $white;
+                top: 4rem;
+                right: -2rem;
+                @extend .radius_10;
+                padding: 2.5rem 2rem;
+                z-index: 85;
+                box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.15);
+                z-index: 9;
+                &::before{
+                    content: '';
+                    background: url(../images/drop_down_ceross_icon.png) no-repeat;
+                    width: 1.3rem;
+                    height: 1.3rem;
+                    display: block;
+                    position: absolute;
+                    top: -.7rem;
+                    right: 1.8rem;
+                }
+                &.notification_modal{
+                    min-width: 325px;
+                    padding: 20px 20px 17px 17px;
+                    min-height: auto;
+                    height: auto;
+                    max-height: 326px;
+                    overflow-y: auto;
+                    margin: 0;
+                    z-index: 999;
+                    &::before{
+                        display: none;
+                    }
+                    li{
+                        font-family: "Roboto",sans-serif;
+                        font-weight: 500;
+                        font-size: 11px;
+                        line-height: 15px;
+                        color: #000000;
+                        text-align: left;
+                        padding-bottom: 15px;
+                        margin: 0;
+                        border-bottom: 1px solid #F1F1F1;
+                        &:not(:first-child){
+                            padding: 15px 0;
+                        }
+                        &:last-child{
+                           border: unset;
+                           padding-bottom: 0;
+                        }
+                        a{
+                            @extend li;
+                            text-decoration: underline;
+                            font-weight: 600;
+                        }
+                        &.notification_modal_flex{
+                            align-items: flex-start;
+                        }
+                    }
+                }
+                li{
+                    @extend .text_right;
+                    @extend .mb_1;
+                    @extend .position_relative;
+                    a{
+                        @extend .fs_12;
+                        line-height: 1.5rem;
+                        color: $text_gray;
+                        @extend .montserrat_semibold;
+                        &.active{
+                            color: $black;
+                            span{
+                                @extend .d_inline_block;
+                                @extend .position_absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                right: -10px;
+                            }
+                        }
+                    }
+                }
+                li:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .notification{
+            @extend .position_relative;
+            @extend .cursor_pointer;
+            img{
+                width: 2.4rem;
+                height: 2.4rem;
+                @extend .img_object_center;                
+            }
+            span{
+                font-weight: 600;
+                font-size: 8px;
+                line-height: 16px;
+                letter-spacing: 0.3125px;
+                text-transform: capitalize;
+                color: #FFFFFF;
+                background: #F84747;
+                border: 1px solid #FFFFFF;
+                box-sizing: border-box;
+                width: 18px;
+                height: 18px;
+                display: block;
+                text-align: center;
+                border-radius: 100%;
+                position: absolute;
+                bottom: -2px;
+                right: -8px;
+                cursor: pointer;
+              }
+        }
+    }       
+.main_notification_modal{
+    &::after{
+        content: "";
+        background: url(../images/drop_down_ceross_icon.png) no-repeat;
+        width: 1.3rem;
+        height: 1.3rem;
+        display: block;
+        position: absolute;
+        top: 34px;
+        right: 0.8rem;
+        margin-top: -1px;
+        z-index: 9;
+    }
+}
+}
